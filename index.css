@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Timer;
+    src: url(./font/CursedTimerUlil-Aznm.ttf);
+}
+
+body {
+    margin: 20px;
+    background: #1a1a1a url(./img/YBlZQTn_nNs.jpg) no-repeat center fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #afafaf;
+    background: linear-gradient(#0d0f1b 20%, #3b4a61);
+    /* border: 5px solid #0d0f1b; */
+    border: 5px solid #161826;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#scoreboard {
+    width: 100%;
+    padding: 10px;
+    background: #22298f;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.scorecard {
+    width: 100%;
+    text-align: center;
+    /* border: 2px dotted red; */
+    padding: 10px;
+}
+
+.pts-change {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.pts-change > * {
+    flex-basis: 100%;
+}
+
+/* Text / Font */
+#sport-type {
+    color: whitesmoke;
+    font-size: 3rem;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.name-team {
+    margin: 10px auto;
+    font-size: 3rem;
+    font-variant: small-caps;
+}
+
+.pts-score {
+    font-family: Timer;
+    font-size: 5rem;
+    color: whitesmoke;
+    background: black;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    margin: 0 10% 10%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px black;
+}
+
+/* Button */
+button {
+    padding: 15px;
+    background: grey;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 1px 1px 4px black;
+}
+
+@media all and (max-width: 700px) {
+    .pts-change {
+        flex-direction: column;
+    }
+    .pts-score {
+        font-size: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

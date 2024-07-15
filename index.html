@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Score Board</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="sport-type">Sport</h1>
+            <div id="scoreboard">
+                <div class="scorecard">
+                    <h3 id="team-home" class="name-team">Home</h3>
+                    <h1 id="score-home" class="pts-score">--</h1>
+                    <div class="pts-change">
+                        <button
+                            id="increment-1a"
+                            class="incNum1 btn-increment"
+                            onclick="incHome_1()">
+                            +1
+                        </button>
+                        <button
+                            id="increment-2a"
+                            class="incNum2 btn-increment"
+                            onclick="incHome_2()">
+                            +2
+                        </button>
+                        <button
+                            id="increment-3a"
+                            class="incNum3 btn-increment"
+                            onclick="incHome_3()">
+                            +3
+                        </button>
+                    </div>
+                </div>
+                <div class="scorecard">
+                    <h3 id="team-away" class="name-team">Guest</h3>
+                    <h1 id="score-away" class="pts-score">--</h1>
+                    <div class="pts-change">
+                        <button
+                            id="increment-1b"
+                            class="incNum1 btn-increment"
+                            onclick="incAway_1()">
+                            +1
+                        </button>
+                        <button
+                            id="increment-2b"
+                            class="incNum2 btn-increment"
+                            onclick="incAway_2()">
+                            +2
+                        </button>
+                        <button
+                            id="increment-3b"
+                            class="incNum3 btn-increment"
+                            onclick="incAway_3()">
+                            +3
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
