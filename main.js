@@ -45,42 +45,92 @@ let awayScoreNum = 0
 function incHome_1() {
     let count = point_count_1
     homeScoreNum += count
-    console.log(homeScoreNum)
+    console.log("Home Score: " + homeScoreNum)
     homeScoreText.textContent = homeScoreNum
+    scoreCheck()
 }
 
 function incHome_2() {
     let count = point_count_2
     homeScoreNum += count
-    console.log(homeScoreNum)
+    console.log("Home Score: " + homeScoreNum)
     homeScoreText.textContent = homeScoreNum
+    scoreCheck()
 }
 
 function incHome_3() {
     let count = point_count_3
     homeScoreNum += count
-    console.log(homeScoreNum)
+    console.log("Home Score: " + homeScoreNum)
     homeScoreText.textContent = homeScoreNum
+    scoreCheck()
 }
 
 // Increase Score for Away
 function incAway_1() {
     let count = point_count_1
     awayScoreNum += count
-    console.log(awayScoreNum)
+    console.log("Away Score: " + awayScoreNum)
     awayScoreText.textContent = awayScoreNum
+    scoreCheck()
 }
 
 function incAway_2() {
     let count = point_count_2
     awayScoreNum += count
-    console.log(awayScoreNum)
+    console.log("Away Score: " + awayScoreNum)
     awayScoreText.textContent = awayScoreNum
+    scoreCheck()
 }
 
 function incAway_3() {
     let count = point_count_3
     awayScoreNum += count
-    console.log(awayScoreNum)
+    console.log("Away Score: " + awayScoreNum)
     awayScoreText.textContent = awayScoreNum
+    scoreCheck()
+}
+
+// Show highest score
+// Check which team is greater
+let iconScore = document.getElementById("icon")
+let topScore = document.getElementById("top-score")
+console.log(topScore.textContent)
+
+function scoreCheck() {
+    iconScore.classList.remove("hidden")
+    if (homeScoreNum > awayScoreNum) {
+        // Add pts-high class to score-home
+        topScore.textContent = "Home is Winning"
+        console.log("Home Winning")
+        awayScoreText.classList.remove("pts-high")
+        homeScoreText.classList.add("pts-high")
+    } else if (homeScoreNum < awayScoreNum) {
+        // Add pts-high class to score-away
+        topScore.textContent = "Away is Winning"
+        console.log("Away Winning")
+        homeScoreText.classList.remove("pts-high")
+        awayScoreText.classList.add("pts-high")
+    } else {
+        // Remove pts-high class from score-home and score-away
+        topScore.textContent = "Tied"
+        console.log("Team Tied")
+        homeScoreText.classList.remove("pts-high")
+        awayScoreText.classList.remove("pts-high")
+    }
+}
+
+function newGame() {
+    console.log("New Game")
+    // Reset score to 0
+    homeScoreNum = 0
+    awayScoreNum = 0
+    // Reset text to --
+    homeScoreText.textContent = "--"
+    awayScoreText.textContent = "--"
+    // Top Score
+    iconScore.classList.add("hidden")
+    topScore.textContent = ""
+    homeScoreText.classList.remove("pts-high")
+    awayScoreText.classList.remove("pts-high")
 }

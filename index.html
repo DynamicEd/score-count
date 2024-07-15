@@ -9,6 +9,9 @@
     <body>
         <div class="container">
             <h1 id="sport-type">Sport</h1>
+            <h2 id="icon" class="hidden">✨ 
+                <span id="top-score"></span>
+                ✨ </h2>
             <div id="scoreboard">
                 <div class="scorecard">
                     <h3 id="team-home" class="name-team">Home</h3>
@@ -58,6 +61,14 @@
                         </button>
                     </div>
                 </div>
+            </div>
+            <div id="game-info">
+                <button
+                    id="new-game"
+                    onclick="newGame()"
+                    class="btn-newgame">
+                    New Game
+                </button>
             </div>
         </div>
         <script src="main.js"></script>

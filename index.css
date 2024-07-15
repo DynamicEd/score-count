@@ -50,16 +50,33 @@ body {
     flex-basis: 100%;
 }
 
+#game-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 /* Text / Font */
 #sport-type {
+    margin: 10px auto;
     color: whitesmoke;
     font-size: 3rem;
     font-weight: bold;
     font-variant: small-caps;
 }
 
+#icon {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
 .name-team {
     margin: 10px auto;
+    color: white;
     font-size: 3rem;
     font-variant: small-caps;
 }
@@ -72,8 +89,34 @@ body {
     padding-top: 2.5rem;
     padding-bottom: 2rem;
     margin: 0 10% 10%;
+    border: 5px solid black;
     border-radius: 20px;
     box-shadow: 1px 1px 5px black;
+}
+
+.pts-high {
+    border: 5px solid lightgrey;
+    animation: ptsBorder 2s infinite;
+}
+
+@keyframes ptsBorder {
+    20% {border-color: peachpuff;}
+    50% {border-color: lightskyblue;}
+    80% {border-color: pink;}
+}
+
+.pts-high-txt {
+    animation: ptsTxt 2s infinite;
+}
+
+@keyframes ptsTxt {
+    20% {color: peachpuff;}
+    50% {color: lightskyblue;}
+    80% {color: pink;}
+}
+
+.hidden {
+    display: none;
 }
 
 /* Button */
@@ -85,6 +128,10 @@ button {
     font-size: 1.5rem;
     font-weight: bold;
     box-shadow: 1px 1px 4px black;
+}
+
+.btn-newgame {
+    margin-top: 10px;
 }
 
 @media all and (max-width: 700px) {
